@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Haize Labs × Eduba</title>
+<meta name="description" content="Saw the RiskRubric.ai leaderboard went GA and the CFPB-violations case study. The part that interests me is what that bank did with the findings next." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div data-eduba="banner" style="background:#0a0a0a;color:#f5f5f5;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:0.01em;border-bottom:1px solid #1f1f1f;position:relative;z-index:1000;">
+  <a href="https://eduba.io" target="_blank" rel="noopener" style="color:#f5f5f5;text-decoration:none;font-weight:800;font-size:17px;letter-spacing:-0.02em;line-height:1;">eduba</a>
+  <span style="opacity:0.88;">Prepared by Eduba for Haize Labs &mdash; Emerge Americas 2026</span>
+</div>
+
+<header class="masthead">
+  <div class="masthead__inner">
+    <a class="mark" href="#" aria-label="Haize Labs">
+      <img src="./logo.ico" alt="Haize Labs" />
+      <span>haize_labs</span>
+    </a>
+    <div class="masthead__meta">
+      <span class="dot"></span>
+      <span>Prepared for Leonard Tang &middot; April 2026</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero__tag">// memo_01 &middot; partnership_notes</div>
+      <h1>What happens after Haize ships the findings.</h1>
+      <p class="hero__sub">
+        Haize found CFPB-rule violations in five minutes where the manual process took three months. RiskRubric.ai is GA. Anthropic, Scale AI, AI21, a Fortune 500 bank on the board. The research publication pace is the moat. This page is about the layer that sits on top of Haize for the enterprise customer.
+      </p>
+      <div class="hero__actions">
+        <a class="btn" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">[ book 30m with matt &rarr; ]</a>
+      </div>
+    </div>
+    <div class="hero__grid" aria-hidden="true"></div>
+  </section>
+
+  <section class="table-section">
+    <div class="wrap">
+      <div class="label">/ 01 &middot; findings_after_report.csv</div>
+      <div class="table">
+        <div class="table__head">
+          <span>layer</span>
+          <span>what it is</span>
+          <span>who owns it today</span>
+          <span>edge</span>
+        </div>
+        <div class="table__row">
+          <span class="mono">ai_governance_policy</span>
+          <span>Map finding &rarr; written policy, attestation, board reporting</span>
+          <span>Legal + CISO + MRM</span>
+          <span class="tag tag--warn">friction</span>
+        </div>
+        <div class="table__row">
+          <span class="mono">sdlc_integration</span>
+          <span>Where a Haizing probe fits in CI, and who blocks a release</span>
+          <span>Platform eng + AppSec</span>
+          <span class="tag tag--warn">friction</span>
+        </div>
+        <div class="table__row">
+          <span class="mono">employee_training</span>
+          <span>Translate findings into curriculum for product, legal, support</span>
+          <span>L&amp;D + AI governance</span>
+          <span class="tag tag--warn">friction</span>
+        </div>
+        <div class="table__row">
+          <span class="mono">remediation_loop</span>
+          <span>Track fix, re-probe, close; durability of patch over time</span>
+          <span>Back to Haize</span>
+          <span class="tag tag--ok">core</span>
+        </div>
+      </div>
+      <p class="note">The three friction rows are methodology work. The partnership thesis is Eduba takes those rows off the research team.</p>
+    </div>
+  </section>
+
+  <section class="frame">
+    <div class="wrap">
+      <div class="label">/ 02 &middot; 60_30_10_frame</div>
+      <h2>Most organizations misread the finding as a closed loop.</h2>
+      <p class="lede">
+        Find the vulnerability, file the ticket, ship the patch. At the scale Haize is working, one finding opens three internal conversations at once. The post-report work splits cleanly.
+      </p>
+      <ol class="layers">
+        <li>
+          <div class="layers__pct">60</div>
+          <div class="layers__body">
+            <div class="layers__name">traditional_code_and_workflow</div>
+            <div class="layers__note">Audit logging. Ticket workflow. CI wiring. Release gates.</div>
+          </div>
+        </li>
+        <li>
+          <div class="layers__pct">30</div>
+          <div class="layers__body">
+            <div class="layers__name">rule_based_policy</div>
+            <div class="layers__note">Policy mapping. Attestation. MRM sign-off. Regulatory alignment.</div>
+          </div>
+        </li>
+        <li>
+          <div class="layers__pct">10</div>
+          <div class="layers__body">
+            <div class="layers__name">genuine_ai_and_judgment</div>
+            <div class="layers__note">Residual-risk acceptance. Ambiguous-finding triage. Policy gaps.</div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="paper">
+    <div class="wrap">
+      <div class="label">/ 03 &middot; adjacent_research</div>
+      <div class="paper__grid">
+        <div>
+          <h2>Non-competing research on our side.</h2>
+          <p>
+            Ethics Engine. arXiv:2510.11742. A psychometric assessment tool for evaluating ideological and moral patterns in LLMs. Adjacent to adversarial robustness, not overlapping. Vocabulary in common: judge model, safety specification, evaluation protocol.
+          </p>
+          <p class="links">
+            <a href="https://arxiv.org/abs/2510.11742" target="_blank" rel="noopener">arxiv.org/abs/2510.11742</a><br>
+            <a href="https://github.com/RinDig/AuditEngine" target="_blank" rel="noopener">github.com/RinDig/AuditEngine</a>
+          </p>
+          <p class="links links--muted">
+            Methodology foundation: <a href="https://github.com/RinDig/Interpretable-Context-Methodology-ICM-" target="_blank" rel="noopener">Interpretable Context Methodology (ICM)</a>. Submitted to ACM TiiS. MIT licensed.
+          </p>
+        </div>
+        <aside class="paper__card">
+          <div class="paper__card-k">paper</div>
+          <div class="paper__card-id">arXiv : 2510.11742</div>
+          <div class="paper__card-rule"></div>
+          <div class="paper__card-title">Ethics Engine</div>
+          <div class="paper__card-sub">Psychometric assessment of LLMs</div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="cred">
+    <div class="wrap">
+      <div class="label">/ 04 &middot; who_is_on_the_other_side</div>
+      <ul>
+        <li><span>01</span> Jake Van Clief, founder. Marine Corps veteran, cryptographic systems. MSc Future Governance, University of Edinburgh.</li>
+        <li><span>02</span> Published in ACM TiiS (ICM) and arXiv (Ethics Engine).</li>
+        <li><span>03</span> Enterprise training at Pacific Life, Colgate-Palmolive, and KPMG UK, one of the Big Four.</li>
+        <li><span>04</span> Eduba partners with NLP Logix for work that sits below the orchestration layer. NLP Logix has been in machine learning since 2011 and runs over 150 data scientists.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <div class="cta__card">
+        <div class="cta__head">
+          <div class="label label--light">/ 05 &middot; first_conversation</div>
+          <h2>Thirty minutes. Partnership posture, not a services pitch.</h2>
+          <p>Bring one customer interaction where the post-report integration would have compressed from weeks to days with a methodology partner in the loop. We will scope the co-delivery shape from there.</p>
+        </div>
+        <a class="btn btn--light" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">[ book 30m &rarr; ]</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap site-foot__inner">
+    <div>// prepared_by_eduba &middot; <a href="https://eduba.io" target="_blank" rel="noopener">eduba.io</a></div>
+    <div>eMerge Americas 2026 &middot; silver_sponsor</div>
+  </div>
+</footer>
+
+<footer data-eduba="footer" style="background:#0a0a0a;color:#dcdcdc;padding:36px 20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;line-height:1.6;border-top:1px solid #1f1f1f;margin-top:48px;">
+  <div style="max-width:1040px;margin:0 auto;">
+    <div style="display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-start;">
+      <div style="min-width:240px;flex:1;">
+        <div style="margin-bottom:6px;"><a href="https://eduba.io" target="_blank" rel="noopener" style="color:#ffffff;text-decoration:none;font-weight:800;font-size:20px;letter-spacing:-0.02em;">eduba</a></div>
+        <div style="opacity:0.85;margin-bottom:4px;">Van Clief Media LLC, dba Eduba</div>
+        <div style="opacity:0.7;">Veteran-owned AI consulting and training firm</div>
+      </div>
+      <div style="min-width:220px;flex:1;">
+        <div style="color:#ffffff;font-weight:600;margin-bottom:2px;">Matt Creamer, CRO</div>
+        <div style="margin-bottom:10px;"><a href="mailto:thecro@eduba.io" style="color:#dcdcdc;text-decoration:underline;">thecro@eduba.io</a></div>
+        <div style="opacity:0.85;">Founder: Jake Van Clief</div>
+      </div>
+      <div style="min-width:180px;flex:1;">
+        <div style="margin-bottom:4px;"><a href="https://eduba.io" target="_blank" rel="noopener" style="color:#dcdcdc;text-decoration:underline;">eduba.io</a></div>
+        <div style="opacity:0.85;">Palm Coast, FL</div>
+      </div>
+    </div>
+    <div style="margin-top:24px;padding-top:16px;border-top:1px solid #1f1f1f;opacity:0.62;font-size:12px;line-height:1.55;">
+      This site was custom-built by Eduba as a conference pitch. It is not affiliated with or operated by Haize Labs.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
